@@ -1,0 +1,12 @@
+-- change class colors of bars in weakaruas
+function()
+    local class_colors = RAID_CLASS_COLORS[select(2, UnitClass("player"))]
+    return class_colors.r, class_colors.g, class_colors.b
+end
+
+
+--percent power formatted string
+function()
+    local player_power = (UnitPower("player")/UnitPowerMax("player")*100)
+    return string.format("%0.1f", player_power)
+end
